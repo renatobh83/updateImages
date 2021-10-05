@@ -52,7 +52,7 @@ export default async function handler(
     const { after } = req.query;
 
     const queryOptions = {
-      size: 6,
+      size: 2,
       ...(after && { after: query.Ref(query.Collection('images'), after) }),
     };
 
@@ -72,7 +72,6 @@ export default async function handler(
           ts: item.ts,
           id: item.ref.id,
         }));
-
         return res.json({
           data: formattedData,
           after: response.after ? response.after[0].id : null,
