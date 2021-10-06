@@ -6,7 +6,6 @@ import { useMutation, useQueryClient } from 'react-query';
 import { api } from '../../services/api';
 import { FileInput } from '../Input/FileInput';
 import { TextInput } from '../Input/TextInput';
-import { error } from 'console';
 
 interface FormAddImageProps {
   closeModal: () => void;
